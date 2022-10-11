@@ -1,7 +1,13 @@
-{% layout "layout.liquid" %}
+{% layout 'layout.liquid' %}
 {% block content %}
-
-    <h1>Welcome!</h1>
-
-
+  <h1 class="display-1">The RickandMorts Wiki</h1>
+  <p>
+    View and add your favorite RickandMort character to the server!</p>
+  <div class="btn-group btn-group-lg">
+    <a href="/auth/signup" class="btn btn-dark">Sign Up</a>
+    <a href="/auth/login" class="btn btn-dark">Login</a>
+    {%- comment -%}
+      <img src="https://pbs.twimg.com/media/CYrA2z3WQAAOZDe.png">
+    {%- endcomment -%}
+  </div>
 {% endblock %}

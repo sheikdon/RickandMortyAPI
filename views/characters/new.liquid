@@ -1,37 +1,29 @@
 {% layout 'layout.liquid' %}
 {% block content %}
-<div class="container-sm">
-    <form action="/examples" method="POST">
-        <fieldset>
-            <legend>Create New Example</legend>
-            <label class="form-label">Title: </label>
-            <input 
-                type="text" 
-                name="title" 
-                placeholder="enter example title"
-                class="form-control"
-            >
-            <label class="form-label">Body:</label>
-            <input 
-                type="text" 
-                name="body" 
-                placeholder="enter example body" 
-                class="form-control"
-            >
-            <label class="form-label">Amount:</label>
-            <input 
-                type="number" 
-                name="amount" 
-                class="form-control"
-            >
-            <label class="form-label">Ready:</label>
-            <input 
-                type="checkbox" 
-                name="ready" 
-                class="form-check-input"
-            >
-        </fieldset>
-        <input type="submit" value="Create New Example" class="btn btn-success">
+  <div class="container-sm">
+    <form action="/characters" method="POST">
+      <fieldset>
+        <legend>Create New RickandMorts Characters</legend>
+        <label class="form-label">Name:
+        </label>
+        <input class="form-control" type="text" name="name" placeholder="enter the name of the RickandMorts character" value="{{ character.name }}">
+        <label class="form-label">Status:
+        </label>
+        <input class="form-control" type="text" name="status" placeholder="what status of the character?" value="{{ character.status }}">
+        <label class="form-label">Species:
+        </label>
+        <input class="form-control" type="text" name="species" placeholder="what is the species of the character?" value="{{ character.species }}">
+        <label class="form-label">Gender:
+        </label>
+        <input class="form-control" type="text" name="gender" placeholder="what gender of the character?" value="{{ character.gender }}">
+        <label class="form-label">Origin:
+        </label>
+        <input class="form-control" type="text" name="origin" placeholder="where does the character originate from?" value="{{ character.origin }}">
+        <label class="form-label">Location:
+        </label>
+        <input class="form-control" type="text" name="location" placeholder="the location of this character?" value="{{ character.location }}">
+      </fieldset>
+      <input type="submit" value="Add New Character" class="btn btn-light">
     </form>
-</div>
-{% endblock %}
+  </div>
+{% endblock %}}}}}}}

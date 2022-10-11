@@ -1,27 +1,36 @@
 {% layout 'layout.liquid'%}
 {% block content %}
-<div>
-    <h2 class="display-6">All Examples</h2>
+  <div>
+    <h2 class="display-6">All RickandMort Characters</h2>
     <div class="row">
-        {% for example in examples %}
+      {% for character in characters %}
         <div class="card" style="width: 18rem;">
-            <h5 class="card-header">{{ example.title }}</h5>
-            <div class="card-body">
-                <h5 class="card-title">
-                    Ready?: {{ example.ready }}
-                </h5>
-                <p class="card-text">
-                    Body: {{ example.body }}
-                </p>
-                <p class="card-text">
-                    Amount: {{ example.amount }}
-                </p>
-                <a href="/examples/{{ example.id }}" class="btn btn-info">
-                    View {{ example.title }}
-                </a>
-            </div>
+          <h5 class="card-header">{{ character.name }}
+          </h5>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ character.status }} - {{ character.species}}
+            </h5>
+            <p class="card-text">
+              Last known location:
+              {{ character.location }}
+            </p>
+            <p class="card-text">
+              Originally from:
+              {{ character.origin }}
+            </p>
+            <a href="/characters/{{ character.id }}" class="btn btn-info">
+              View
+              {{ character.name }}
+            </a>
+          </div>
         </div>
-        {% endfor %}
+      {% endfor %}
     </div>
-</div>
-{% endblock %}
+  </div>
+  {% else %}
+    <div>
+      <h2 class="display-6">No RickandMort characters yet... time to add some!</h2>
+    </div>
+  {% endif %}
+{% endblock %}}

@@ -2,7 +2,6 @@
 // Import Dependencies
 ///////////////////////////////////////
 const mongoose = require('./connection')
-const Fruit = require('./character')
 const Character = require('./character')
 
 

@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    background-image: url("https://images.alphacoders.com/876/876589.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+img {
+    justify-content: center;
+}
+
+.card {
+    margin: 5px;
+    /* background-color: blanchedalmond; */
+    color: black;
+}

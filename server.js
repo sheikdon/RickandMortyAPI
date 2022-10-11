@@ -4,9 +4,9 @@
 require("dotenv").config() // make env variables available
 const express = require("express")
 const middleware = require('./utils/middleware')
-const characterRouter = require('./controllers/character')
+const CharacterRouter = require('./controllers/character')
 const UserRouter = require('./controllers/user')
-const User = require("./models/user")
+const CommentRouter = require('./controllers/comment')
 // SEE MORE DEPENDENCIES IN ./utils/middleware.js
 // user and resource routes linked in ./utils/middleware.js
 
@@ -22,8 +22,8 @@ middleware(app)
 ////////////////////
 
 app.use('/auth', UserRouter)
-app.use('/characters', characterRouter)
-
+app.use('/characters', CharacterRouter)
+app.use('/comments', CommentRouter)
 app.get('/', (req, res) => {
     const { username, userId, loggedIn } = req.session
 	res.render('index.liquid', { loggedIn, username, userId })

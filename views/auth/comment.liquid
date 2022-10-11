@@ -1,0 +1,18 @@
+{% block content %}
+  <div class="card mb-4 shadow">
+    <div class="card-body">
+      <p>{{ comment.note }}
+      </p>
+      <div class="d-flex justify-content-between">
+        <small>author:
+          {{ comment.author.username }}
+        </small>
+        {% if comment.author == userId %}
+          <form action="/comments/delete/{{fruit.id}}/{{comment.id}}?_method=DELETE" method="POST">
+            <input class="btn btn-danger" type="submit" value="X">
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}}}
