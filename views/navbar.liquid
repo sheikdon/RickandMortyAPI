@@ -1,7 +1,8 @@
 {% block content %}
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand">Examplr</a>
+        <a href="/" class="navbar-brand"><img src="https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b" alt="Bootstrap" width="30" height="24">
+    </a></a>
         {% if loggedIn %}
         <a href="/examples/mine" class="nav-link text-light">Hello {{ username }} </a>
         {% endif %}
@@ -22,3 +23,5 @@
     </div>
 </nav>
 {% endblock %}
+
+{%- comment -%} https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b {%- endcomment -%}
