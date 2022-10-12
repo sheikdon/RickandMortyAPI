@@ -158,7 +158,6 @@ router.get("/:id", (req, res) => {
         .catch(err => res.redirect(`/error?error=${err}`))
 })
 
-
 //////////////////////////////////////////
 // Export the Router
 //////////////////////////////////////////

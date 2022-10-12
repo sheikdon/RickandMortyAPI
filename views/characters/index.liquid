@@ -1,36 +1,40 @@
 {% layout 'layout.liquid'%}
 {% block content %}
-  <div>
-    <h2 class="display-6">All RickandMort Characters</h2>
-    <div class="row">
-      {% for character in characters %}
-        <div class="card" style="width: 18rem;">
-          <h5 class="card-header">{{ character.name }}
-          </h5>
-          <div class="card-body">
-            <h5 class="card-title">
-              {{ character.status }} - {{ character.species}}
+  {% if characters.length > 0%}
+    <div>
+      <h2 class="display-6">All RickandMort Characters</h2>
+      <div class="row">
+        {% for character in characters %}
+          <div class="card" style="width: 20rem;">
+            <h5 class="card-header">{{ character.name }}
             </h5>
-            <p class="card-text">
-              Last known location:
-              {{ character.location }}
-            </p>
-            <p class="card-text">
-              Originally from:
-              {{ character.origin }}
-            </p>
-            <a href="/characters/{{ character.id }}" class="btn btn-info">
-              View
-              {{ character.name }}
-            </a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <img src="{{ character.image}}" style="width: ;14rem">
+                {{ character.status }}
+                -
+                {{ character.species}}
+              </h5>
+              <p class="card-text">
+                Last known location:
+                {{ character.location }}
+              </p>
+              <p class="card-text">
+                Originally from:
+                {{ character.origin }}
+              </p>
+              <a href="/characters/{{ character.id }}" class="btn btn-info">
+                View
+                {{ character.name }}
+              </a>
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
   {% else %}
     <div>
       <h2 class="display-6">No RickandMort characters yet... time to add some!</h2>
     </div>
   {% endif %}
-{% endblock %}}
+{% endblock %}}}}}}}}}

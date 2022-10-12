@@ -22,8 +22,19 @@
         <label class="form-label">Location:
         </label>
         <input class="form-control" type="text" name="location" placeholder="the location of this character?" value="{{ character.location }}">
+        {%- comment -%}
+          image inserter
+        {%- endcomment -%}
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Image for character (optional):</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        {%- comment -%}
+          image inserter
+        {%- endcomment -%}
       </fieldset>
       <input type="submit" value="Add New Character" class="btn btn-light">
+
     </form>
   </div>
-{% endblock %}}}}}}}
+{% endblock %}}}}}}}}}}}}}

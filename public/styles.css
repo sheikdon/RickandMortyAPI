@@ -16,3 +16,10 @@ img {
     /* background-color: blanchedalmond; */
     color: black;
 }
+.row {
+    text-align: center;
+    justify-content: center;
+}
+img{
+    align-items: center;
+}

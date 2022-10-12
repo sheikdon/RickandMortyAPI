@@ -15,7 +15,6 @@ const characterSchema = new Schema(
 		status: { type: String, required: true },
         species: { type: String, required: true },
 		gender: { type: String, required: true },
-		type: { type: String, required: true },
 		origin: { type: String, required: true },
 		location: { type: String, required: true },
 		image: {type: String, required: true},
