@@ -8,7 +8,7 @@
       <div class="img1">
         <img src="{{ character.image}}">
       </div>
-
+      <div class="header">
       <h3>
         {% if character.status == "Alive" %}
           <span>
@@ -28,6 +28,7 @@
         -
         {{ character.species}}
       </h3>
+      </div>
       <h6>Last known location:
         {{ character.location }}
       </h6>

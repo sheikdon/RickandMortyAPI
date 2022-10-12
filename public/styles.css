@@ -37,3 +37,19 @@ img1{
 .container-md {
     margin:auto;
 }
+.col-md-8 {
+    color: white;
+    background-color: black;
+}
+.header {
+    background-color: black;
+}
+.col-md-4{
+    background-color: black;
+}
+.card-textm{
+    margin-bottom: auto;
+}
+.display-6{
+    margin-bottom: 20px;
+}

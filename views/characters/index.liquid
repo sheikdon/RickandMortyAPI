@@ -47,7 +47,7 @@
             {%- comment -%}
   Version 2
 {%- endcomment -%}
-<div class="card mb-3" style="max-width: 540px;">
+<div class="cardmb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="{{ character.image}}" class="img-fluid rounded-start" alt="character image">
@@ -57,7 +57,7 @@
         <h5 class="card-title">
           {{ character.name }}
         </h5>
-        <h5 class="card-text">
+        <h5 class="card-text1">
           {% if character.status == "Alive" %}
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-success" viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
           -
           {{ character.species}}
         </h5>
-        <p class="card-text">
+        <p class="card-textm">
                 Last known location:
                 {{ character.location }}
               </p>
@@ -83,7 +83,7 @@
                 Originally from:
                 {{ character.origin }}
               </p>
-              <a href="/characters/{{ character.id }}" class="btn btn-info">
+              <a href="/characters/{{ character.id }}" class="btn btn-light">
                 <p class="card-text">
                   <small class="text-muted">View
                     {{ character.name }}

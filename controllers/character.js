@@ -152,7 +152,6 @@ router.get("/:id", (req, res) => {
             const username = req.session.username
             const loggedIn = req.session.loggedIn
             const userId = req.session.userId
-            // res.json({ fruit: fruit })
             res.render('characters/show', { character, username, loggedIn, userId })
         })
         .catch(err => res.redirect(`/error?error=${err}`))

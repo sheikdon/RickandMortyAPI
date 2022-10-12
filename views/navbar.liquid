@@ -17,17 +17,28 @@
                 <a href="/auth/logout" class="nav-link text-light">Log Out</a>
 
 {%- comment -%} Search Bar {%- endcomment -%}
-  <div class="container-fluid">
+  {%- comment -%} <div class="container-fluid">
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-light" type="submit">Search</button>
     </form>
-  </div>
+  </div> {%- endcomment -%}
+
+  {%- comment -%} <form action="{{ character.search_url }}">
+  <input type="text"
+    placeholder="Search"
+    name="q"
+    value="{{ character.name | escape }}"
+ >
+  <input type="submit" value="Search">
+</form> {%- endcomment -%}
 {%- comment -%} Search bar {%- endcomment -%}
 
             {% else %}
                 <a href="/auth/signup" class="nav-link text-light">Sign Up</a>
                 <a href="/auth/login" class="nav-link text-light">Sign In</a>
+                {%- comment -%} <a href="/characters" class="nav-link text-light">View All Characters</a> {%- endcomment -%}
+
             {% endif %}
         </div>
     </div>
