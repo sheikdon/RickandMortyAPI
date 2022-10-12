@@ -214,7 +214,7 @@ db.on('open', () => {
         "location": "Citadel of Ricks",
         "image": "https://rickandmortyapi.com/api/character/avatar/21.jpeg",
         },
-            {
+        {
             "name": "Aqua Rick",
             "status": "unknown",
             "species": "Fish-Person",
