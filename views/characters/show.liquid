@@ -3,32 +3,28 @@
   <div class="container-md">
     <article>
       <h2>
-        {{ character.name }}      
+        {{ character.name }}
       </h2>
       <div class="img1">
-      <img src="{{ character.image}}">
+        <img src="{{ character.image}}">
       </div>
-     
-      <h3> 
+
+      <h3>
         {% if character.status == "Alive" %}
-        <span>
-          <svg 
-          xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-          fill="currentColor" class="bi bi-circle-fill text-success" viewBox="0 0 16 16">
-            <circle cx="8" cy="8" r="8"/>
-          </svg>
-        </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-success" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+          </span>
         {% else %}
-        <span>
-          <svg 
-          xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-          fill="currentColor" class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
-            <circle cx="8" cy="8" r="8"/>
-          </svg>
-        </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+          </span>
         {% endif %}
 
-        {{ character.status }} 
+        {{ character.status }}
         -
         {{ character.species}}
       </h3>
@@ -47,7 +43,7 @@
           </form>
         </div>
       {% endif %}
-      </article>
+    </article>
     <hr>
     <h4>Comments</h4>
     <hr>
@@ -72,7 +68,7 @@
       <div class="container-sm justify-content-center">
         <div class="col-md-8 col-lg-6">
           {% for comment in character.comments %}
-            {% render '../comment.liquid', comment: comment, userId: userId, character: character %}
+            {% render '../auth/comment.liquid', comment: comment, userId: userId, character: character %}
           {% endfor %}
         </div>
       </div>
@@ -80,7 +76,6 @@
       <small>no comments yet...</small>
     {% endif %}
   </div>
-{%- comment -%} {% endblock %}} {%- endcomment -%}
-    </article>
+  </article>
   </div>
-{% endblock %}}
+{% endblock %}

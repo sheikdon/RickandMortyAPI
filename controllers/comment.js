@@ -23,18 +23,18 @@ router.post("/:characterId", (req, res) => {
     } else {
         res.sendStatus(401)
     }
-    // find a specific fruit
+    // find a specific 
     Character.findById(characterId)
         // do something if it works
         //  --> send a success response status and maybe the comment? maybe the fruit?
         .then(character => {
-            // push the comment into the fruit.comments array
+            // push the comment into the .comments array
             character.comments.push(req.body)
-            // we need to save the fruit
+            // we need to save the 
             return character.save()
         })
         .then(character => {
-            // res.status(200).json({ fruit: fruit })
+            // res.status(200).json({  })
             res.redirect(`/characters/${character.id}`)
         })
         // do something else if it doesn't work

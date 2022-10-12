@@ -3,10 +3,17 @@
   <div class="container-md">
     <h2>Are you sure you would like to log out?</h2>
     <div class="btn-group">
-      <a class="btn btn-light"></a>
+      {%- comment -%}
+        <a class="btn btn-light">No, back to the Frootr</a>
+      {%- endcomment -%}
+      {%- comment -%}
+        <form action="/character/mine" method="POST">
+        <input class="btn btn-dark" type="submit" value="No, back to the Frootr">
+        </form>
+      {%- endcomment -%}
       <form action="/auth/logout?_method=DELETE" method="POST">
-        <input class="btn btn-dark" type="submit" value="Yes, log me out">
+        <input class="btn btn-dark" type="submit" value="Yes, sign me out">
       </form>
     </div>
   </div>
-{% endblock %}}}}}}}}}}}}}}
+{% endblock %}}}}}}}}}}}}}}}}}}

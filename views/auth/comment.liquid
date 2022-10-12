@@ -1,3 +1,4 @@
+{% layout 'layout.liquid' %}
 {% block content %}
   <div class="card mb-4 shadow">
     <div class="card-body">
@@ -8,11 +9,12 @@
           {{ comment.author.username }}
         </small>
         {% if comment.author == userId %}
-          <form action="/comments/delete/{{fruit.id}}/{{comment.id}}?_method=DELETE" method="POST">
-            <input class="btn btn-danger" type="submit" value="X">
+          <a href="/comments/edit/{{character.id}}/{{comment.id}}" class="btn btn-dark">Edit Comment</a>
+          <form action="/comments/delete/{{character.id}}/{{comment.id}}?_method=DELETE" method="POST">
+            <input class="btn btn-danger" type="submit" value="Delete Comment">
           </form>
         {% endif %}
       </div>
     </div>
   </div>
-{% endblock %}}}}
+{% endblock %}}}}}}}}

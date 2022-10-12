@@ -1,34 +1,55 @@
 {% layout 'layout.liquid' %}
 {% block content %}
+  {% if loggedIn %}
+    <div class="container-sm">
+      <form action="/characters/{{character.id}}?_method=PUT" method="POST">
+        <fieldset>
+          <legend>Edit
+            {{character.name}}
+          </legend>
+          <label class="form-label">Name:
+          </label>
+          <input class="form-control" type="text" name="name" placeholder="enter the name of the RickandMorts character" value="{{ character.name }}">
+          <label class="form-label">Status:
+          </label>
+          <input class="form-control" type="text" name="status" placeholder="what status of the character?" value="{{ character.status }}">
+          <label class="form-label">Species:
+          </label>
+          <input class="form-control" type="text" name="species" placeholder="what is the species of the character?" value="{{ character.species }}">
+          <label class="form-label">Gender:
+          </label>
+          <input class="form-control" type="text" name="gender" placeholder="what gender of the character?" value="{{ character.gender }}">
+          <label class="form-label">Origin:
+          </label>
+          <input class="form-control" type="text" name="origin" placeholder="where does the character originate from?" value="{{ character.origin }}">
+          <label class="form-label">Location:
+          </label>
+          <input class="form-control" type="text" name="location" placeholder="the location of this character?" value="{{ character.location }}">
 
-  <div class="container-sm">
-    <form action="/characters/{{character.id}}?_method=PUT" method="POST">
-      <fieldset>
-        <legend>Edit
-          {{character.name}}
-        </legend>
-        <label class="form-label">Name:
-        </label>
-        <input class="form-control" type="text" name="name" placeholder="enter the name of the RickandMorts character" value="{{ character.name }}">
-        <label class="form-label">Status:
-        </label>
-        <input class="form-control" type="text" name="status" placeholder="what status of the character?" value="{{ character.status }}">
-        <label class="form-label">Species:
-        </label>
-        <input class="form-control" type="text" name="species" placeholder="what is the species of the character?" value="{{ character.species }}">
-        <label class="form-label">Gender:
-        </label>
-        <input class="form-control" type="text" name="gender" placeholder="what gender of the character?" value="{{ character.gender }}">
-        <label class="form-label">Origin:
-        </label>
-        <input class="form-control" type="text" name="origin" placeholder="where does the character originate from?" value="{{ character.origin }}">
-        <label class="form-label">Location:
-        </label>
-        <input class="form-control" type="text" name="location" placeholder="the location of this character?" value="{{ character.location }}">
+        </fieldset>
+        <input class="btn btn-dark" type="submit" value="Edit {{character.name}}">
+      </form>
+    </div>
+  {% endif %}
+{% endblock %}
 
-      </fieldset>
-      <input class="btn btn-dark" type="submit" value="Edit {{character.name}}">
-    </form>
+{%- comment -%}
+  {%layout 'layout.liquid' %}
+  // i need to make this only post on users page
+  {% block content %}
+  <div class="container-mn" style="color:white;">
+  <form action="/comments/edit/{{comment.id}}?_method=PATCH" method="POST">
+  <fieldset>
+  <legend style="color: white;">Edit Comment</legend>
+  <label class="form-lable">Comment:</label>
+  <input value="{{comment.note}}" class="form-control" type="text" name="note" placeholder="Enter Comment">
+  </fieldset>
+  <div class="btn-group">
+  <input type="submit" class="btn btn-success">
+  <a href="/characters/{{theComment}}" class="btn btn-warning">Nevermind</a>
+  </div>
+  </form>
   </div>
 
-{% endblock %}}}}}}}
+
+  {% endblock %}}}{%- endcomment -%}}}
