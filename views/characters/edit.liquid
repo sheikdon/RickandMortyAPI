@@ -24,10 +24,9 @@
         <label class="form-label">Location:
         </label>
         <input class="form-control" type="text" name="location" placeholder="the location of this character?" value="{{ character.location }}">
-        <div class="input-group mb-3">
-          <input type="file" class="form-control" id="inputGroupFile02" value="{{ character.image }}">
-          <label class="input-group-text" for="inputGroupFile02">Upload</label>
-        </div>
+        <label class="form-label">Image:
+        </label>
+        <input class="form-control" type="text" name="image" placeholder="insert desired URL" value="{{ character.image }}">
       </fieldset>
       <input class="btn btn-dark" type="submit" value="Edit {{character.name}}">
     </form>
@@ -53,4 +52,4 @@
   </div>
 
 
-  {% endblock %}}}{%- endcomment -%}}}}}
+  {% endblock %}}}{%- endcomment -%}}}}}}
