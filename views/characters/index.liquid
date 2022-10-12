@@ -3,7 +3,7 @@
   {% if characters.length > 0%}
     <div>
       <h2 class="display-6">All RickandMort Characters</h2>
-      <div class="row">
+      <div class="row g-0">
         {% for character in characters %}
           <div class="card" style="width: 20rem;">
             <h5 class="card-header">{{ character.name }}
@@ -24,8 +24,13 @@
                 {{ character.origin }}
               </p>
               <a href="/characters/{{ character.id }}" class="btn btn-info">
-                View
-                {{ character.name }}
+                <p class="card-text">
+                  <small class="text-muted">View
+                    {{ character.name }}
+                  </small>
+                </p>
+
+
               </a>
             </div>
           </div>

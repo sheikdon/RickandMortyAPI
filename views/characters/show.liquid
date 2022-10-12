@@ -3,10 +3,32 @@
   <div class="container-md">
     <article>
       <h2>
-        {{ character.name }}
+        {{ character.name }}      
       </h2>
-      <h3>
-        if{{ character.status }} 
+      <div class="img1">
+      <img src="{{ character.image}}">
+      </div>
+     
+      <h3> 
+        {% if character.status == "Alive" %}
+        <span>
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+          fill="currentColor" class="bi bi-circle-fill text-success" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="8"/>
+          </svg>
+        </span>
+        {% else %}
+        <span>
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+          fill="currentColor" class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="8"/>
+          </svg>
+        </span>
+        {% endif %}
+
+        {{ character.status }} 
         -
         {{ character.species}}
       </h3>
@@ -27,14 +49,14 @@
       {% endif %}
       </article>
     <hr>
-    <h4>comments</h4>
+    <h4>Comments</h4>
     <hr>
     {% if loggedIn %}
       <div class="col-md-6">
         <form action="/comments/{{character.id}}" method="POST">
           <fieldset>
             <legend>Add Comment</legend>
-            <label class="form-label">comment:</label>
+            <label class="form-label">Comment:</label>
             <input class="form-control mb-1" type="text" placeholder="enter your comment..." name="note" required>
           </fieldset>
           <input class="btn btn-success" type="submit" value="add comment">
@@ -58,7 +80,7 @@
       <small>no comments yet...</small>
     {% endif %}
   </div>
-{% endblock %}}
+{%- comment -%} {% endblock %}} {%- endcomment -%}
     </article>
   </div>
 {% endblock %}}

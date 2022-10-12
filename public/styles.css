@@ -20,6 +20,17 @@ img {
     text-align: center;
     justify-content: center;
 }
-img{
+img1{
     align-items: center;
+    margin: 0 auto;
+}
+.col-md-6 {
+    margin: 0 auto;
+}
+.display-4 {
+    margin: 100px;
+    
+}
+.btn-group {
+    margin: 20px;
 }
