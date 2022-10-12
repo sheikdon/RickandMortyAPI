@@ -5,12 +5,25 @@
       <h2 class="display-6">All RickandMort Characters</h2>
       <div class="row g-0">
         {% for character in characters %}
-          <div class="card" style="width: 20rem;">
+          {%- comment -%} <div class="card" style="width: 20rem;">
             <h5 class="card-header">{{ character.name }}
             </h5>
             <div class="card-body">
               <h5 class="card-title">
                 <img src="{{ character.image}}" style="width: ;14rem">
+                {% if character.status == "Alive" %}
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-success" viewBox="0 0 16 16">
+                      <circle cx="8" cy="8" r="8"/>
+                    </svg>
+                  </span>
+                {% else %}
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
+                      <circle cx="8" cy="8" r="8"/>
+                    </svg>
+                  </span>
+                {% endif %}
                 {{ character.status }}
                 -
                 {{ character.species}}
@@ -29,10 +42,58 @@
                     {{ character.name }}
                   </small>
                 </p>
-
-
               </a>
-            </div>
+            </div> {%- endcomment -%}
+            {%- comment -%}
+  Version 2
+{%- endcomment -%}
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ character.image}}" class="img-fluid rounded-start" alt="character image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ character.name }}
+        </h5>
+        <h5 class="card-text">
+          {% if character.status == "Alive" %}
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-success" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg>
+            </span>
+          {% else %}
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg>
+            </span>
+          {% endif %}
+          {{ character.status }}
+          -
+          {{ character.species}}
+        </h5>
+        <p class="card-text">
+                Last known location:
+                {{ character.location }}
+              </p>
+              <p class="card-text">
+                Originally from:
+                {{ character.origin }}
+              </p>
+              <a href="/characters/{{ character.id }}" class="btn btn-info">
+                <p class="card-text">
+                  <small class="text-muted">View
+                    {{ character.name }}
+                  </small>
+                </p>
+              </a>
+        </p>
+      </div>
+    </div>
+  </div>
           </div>
         {% endfor %}
       </div>
@@ -43,3 +104,4 @@
     </div>
   {% endif %}
 {% endblock %}}}}}}}}}
+
