@@ -9,7 +9,6 @@
           {{ comment.author.username }}
         </small>
         {% if comment.author == userId %}
-          <a href="/comments/edit/{{character.id}}/{{comment.id}}" class="btn btn-dark">Edit Comment</a>
           <form action="/comments/delete/{{character.id}}/{{comment.id}}?_method=DELETE" method="POST">
             <input class="btn btn-danger" type="submit" value="Delete Comment">
           </form>
@@ -17,4 +16,4 @@
       </div>
     </div>
   </div>
-{% endblock %}}}}}}}}}
+{% endblock %}}}}}}}}}}
