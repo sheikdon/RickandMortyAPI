@@ -42,6 +42,12 @@ router.post("/:characterId", (req, res) => {
         .catch(err => res.redirect(`/error?error=${err}`))
 })
 
+
+
+
+
+
+
 // DELETE
 // only the author of the comment can delete it
 router.delete('/delete/:characterId/:commId', (req, res) => {

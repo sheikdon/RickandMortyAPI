@@ -1,7 +1,7 @@
 {% layout 'layout.liquid' %}
 {% block content %}
   <div class="container-sm">
-    <form action="/characters/{{character.id}}?_method=PUT" method="POST">
+    <form action="/characters/{{character._id}}?_method=PUT" method="POST">
       <fieldset>
         <legend>Edit
           {{character.name}}
@@ -52,4 +52,4 @@
   </div>
 
 
-  {% endblock %}}}{%- endcomment -%}}}}}}
+  {% endblock %}}}{%- endcomment -%}}}}}}}

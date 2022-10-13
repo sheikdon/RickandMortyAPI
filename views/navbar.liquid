@@ -1,10 +1,10 @@
 {% block content %}
 <nav class="navbar navbar-expand-md navbar-light bg-light bg-opacity-10">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand"><img src="https://juicebubble.co.za/wp-content/uploads/2021/02/morty-and-rick-silhouette-grey-square.png" alt="Bootstrap" width="60" height="44">
+        <a href="/characters" class="navbar-brand"><img src="https://juicebubble.co.za/wp-content/uploads/2021/02/morty-and-rick-silhouette-grey-square.png" alt="Bootstrap" width="60" height="44">
     </a></a>
         {% if loggedIn %}
-        <a href="characters/mine" class="nav-link text-light">Hello {{ username }} !</a>
+        <a href="/characters/mine" class="nav-link text-light">Hello {{ username }} !</a>
         {% endif %}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,32 +12,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             {% if loggedIn %}
                 <a href="/characters" class="nav-link text-light">View All Characters</a>
-                <a href="/characters/new" class="nav-link text-light">Add New RickandMorts</a>
+                <a href="/characters/new" class="nav-link text-light">Add New RickandMorts</a>          
                 <a href="/characters/mine" class="nav-link text-light">My RickandMorts</a>
                 <a href="/auth/logout" class="nav-link text-light">Log Out</a>
-
-{%- comment -%} Search Bar {%- endcomment -%}
-  {%- comment -%} <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-light" type="submit">Search</button>
-    </form>
-  </div> {%- endcomment -%}
-
-  {%- comment -%} <form action="{{ character.search_url }}">
+   {%- comment -%} search bar {%- endcomment -%}
+   <form action="{{ character.name }}">
   <input type="text"
     placeholder="Search"
     name="q"
     value="{{ character.name | escape }}"
  >
   <input type="submit" value="Search">
-</form> {%- endcomment -%}
+</form> 
 {%- comment -%} Search bar {%- endcomment -%}
 
             {% else %}
                 <a href="/auth/signup" class="nav-link text-light">Sign Up</a>
                 <a href="/auth/login" class="nav-link text-light">Sign In</a>
-                 <a href="/characters" class="nav-link text-light">View All Characters</a> 
 
             {% endif %}
         </div>

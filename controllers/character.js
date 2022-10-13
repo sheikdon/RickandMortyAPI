@@ -149,6 +149,7 @@ router.get("/:id", (req, res) => {
         // we can also populate fields of our subdocuments
         .populate("comments.author", "username")
         .then(character => {
+            console.log(character)
             const username = req.session.username
             const loggedIn = req.session.loggedIn
             const userId = req.session.userId
