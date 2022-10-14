@@ -32,19 +32,19 @@ router.get("/", (req, res) => {
 
 // for searach
 
-// router.post('/?', (req, res) => {
-// 	console.log(req.body.character)
-// 	Character.find({name:{$eq: req.body.character}})
-// 		.then(characters => {
-// 			console.log(characters)
-// 			const username = req.session.username
-// 			const loggedIn = req.session.loggedIn
-// 			const userId = req.session.userId
+router.get('/characters/?', (req, res) => {
+	console.log(req.body.params)
+	Character.find({name:{$eq: req.body.params}})
+		.then(characters => {
+			console.log(characters)
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			const userId = req.session.userId
 
-// 			res.redirect(`/characters/${characters[0].id}`)
-// 		})
-// 		.catch(err => res.redirect(`/error?error=${err}`))
-// })  
+			res.redirect(`/characters/${characters[0].id}`)
+		})
+		.catch(err => res.redirect(`/error?error=${err}`))
+})  
 
 
 

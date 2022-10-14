@@ -1,36 +1,56 @@
 {% block content %}
-<nav class="navbar navbar-expand-md navbar-light bg-light bg-opacity-10">
+  <nav class="navbar navbar-expand-md navbar-light bg-light bg-opacity-10">
     <div class="container-fluid">
-        <a href="/characters" class="navbar-brand"><img src="https://juicebubble.co.za/wp-content/uploads/2021/02/morty-and-rick-silhouette-grey-square.png" alt="Bootstrap" width="60" height="44">
-    </a></a>
-        {% if loggedIn %}
-        <a href="/characters/mine" class="nav-link text-light">Hello {{ username }} !</a>
+      <a href="/characters" class="navbar-brand"><img src="https://juicebubble.co.za/wp-content/uploads/2021/02/morty-and-rick-silhouette-grey-square.png" alt="Bootstrap" width="60" height="44">
+      </a>
+    </a>
+    {% if loggedIn %}
+      <a href="/characters/mine" class="nav-link text-light">Hello
+        {{ username }}
+        !</a>
+    {% endif %}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      {% if loggedIn %}
+        <a href="/characters" class="nav-link text-light">View All Characters</a>
+        <a href="/characters/new" class="nav-link text-light">Add New RickandMorts</a>
+        <a href="/characters/mine" class="nav-link text-light">My RickandMorts</a>
+        <a href="/auth/logout" class="nav-link text-light">Log Out</a>
+        {%- comment -%}
+          search bar
+        {%- endcomment -%}
+        
+        <form action="/?" method="GET"></form>
+          <div class=”search-box”>
+          <input type=”text” name="text" id="characterSearch" placeholder="Find a character">
+          <button class=”search-btn” type=”submit”>Search</button>
+          </div>
+        
+        
+          {%- comment -%} <form action="{{ character.search_url }}">
+            <input type="text" placeholder="Search" name="?" value="{{ search.terms | escape }}"/>
+            <input type="hidden" name="type" value="name"/>
+            <input type="hidden" name="options[unavailable_products]" value="hide"/>
+            <input type="hidden" name="options[prefix]" value="last"/>
+            <input type="submit" value="Search"/>
+          </form> {%- endcomment -%}
+
+          {%- comment -%}
+            Search bar
+          {%- endcomment -%}
+
+        {% else %}
+          <a href="/auth/signup" class="nav-link text-light">Sign Up</a>
+          <a href="/auth/login" class="nav-link text-light">Sign In</a>
+
         {% endif %}
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            {% if loggedIn %}
-                <a href="/characters" class="nav-link text-light">View All Characters</a>
-                <a href="/characters/new" class="nav-link text-light">Add New RickandMorts</a>          
-                <a href="/characters/mine" class="nav-link text-light">My RickandMorts</a>
-                <a href="/auth/logout" class="nav-link text-light">Log Out</a>
-   {%- comment -%} search bar {%- endcomment -%}
-   {%- comment -%} <form action="/characters/?" method="POST">
-                    <div class=”search-box”>
-                        <input type=”text” name="text" id="characterSearch" placeholder="Find a character">
-                        <button class=”search-btn” type=”submit”>Search</button>
-                    </div> {%- endcomment -%}
-{%- comment -%} Search bar {%- endcomment -%}
-
-            {% else %}
-                <a href="/auth/signup" class="nav-link text-light">Sign Up</a>
-                <a href="/auth/login" class="nav-link text-light">Sign In</a>
-
-            {% endif %}
-        </div>
+      </div>
     </div>
-</nav>
+  </nav>
 {% endblock %}
 
-{%- comment -%} https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b {%- endcomment -%}
+{%- comment -%}
+  https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b
+{%- endcomment -%}}
