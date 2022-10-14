@@ -29,6 +29,25 @@ router.get("/", (req, res) => {
         .catch(err => res.redirect(`/error?error=${err}`))
 })
 
+
+// for searach
+
+// router.post('/?', (req, res) => {
+// 	console.log(req.body.character)
+// 	Character.find({name:{$eq: req.body.character}})
+// 		.then(characters => {
+// 			console.log(characters)
+// 			const username = req.session.username
+// 			const loggedIn = req.session.loggedIn
+// 			const userId = req.session.userId
+
+// 			res.redirect(`/characters/${characters[0].id}`)
+// 		})
+// 		.catch(err => res.redirect(`/error?error=${err}`))
+// })  
+
+
+
 // GET for new 
 // renders the form to create a 
 router.get('/new', (req, res) => {
@@ -120,6 +139,11 @@ router.put("/:id", (req, res) => {
         })
         .catch(err => res.redirect(`/error?error=${err}`))
 })
+
+
+
+
+
 
 router.delete('/:id', (req, res) => {
     // get the fruit id
