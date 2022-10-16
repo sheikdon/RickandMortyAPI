@@ -32,24 +32,3 @@
     </form>
   </div>
 {% endblock %}
-
-{%- comment -%}
-  {%layout 'layout.liquid' %}
-  // i need to make this only post on users page
-  {% block content %}
-  <div class="container-mn" style="color:white;">
-  <form action="/comments/edit/{{comment.id}}?_method=PATCH" method="POST">
-  <fieldset>
-  <legend style="color: white;">Edit Comment</legend>
-  <label class="form-lable">Comment:</label>
-  <input value="{{comment.note}}" class="form-control" type="text" name="note" placeholder="Enter Comment">
-  </fieldset>
-  <div class="btn-group">
-  <input type="submit" class="btn btn-success">
-  <a href="/characters/{{theComment}}" class="btn btn-warning">Nevermind</a>
-  </div>
-  </form>
-  </div>
-
-
-  {% endblock %}}}{%- endcomment -%}}}}}}}

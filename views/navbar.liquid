@@ -22,20 +22,20 @@
           search bar
         {%- endcomment -%}
         
-        <form action="/?" method="GET"></form>
+         <form action="/characters/search/?" method="POST">
           <div class=”search-box”>
           <input type=”text” name="text" id="characterSearch" placeholder="Find a character">
           <button class=”search-btn” type=”submit”>Search</button>
-          </div>
+          </div> 
+        </form>
         
-        
-          {%- comment -%} <form action="{{ character.search_url }}">
+           {%- comment -%} <form action="{{ character.search_url }}">
             <input type="text" placeholder="Search" name="?" value="{{ search.terms | escape }}"/>
             <input type="hidden" name="type" value="name"/>
             <input type="hidden" name="options[unavailable_products]" value="hide"/>
             <input type="hidden" name="options[prefix]" value="last"/>
             <input type="submit" value="Search"/>
-          </form> {%- endcomment -%}
+          </form>  {%- endcomment -%}
 
           {%- comment -%}
             Search bar

@@ -15,7 +15,7 @@ const router = express.Router()
 // GET request
 // index route -> shows all instances of a document in the db
 router.get("/", (req, res) => {
-    // console.log("this is the request", req)
+    console.log("this is the request", req)
     // in our index route, we want to use mongoose model methods to get our data
     Character.find({})
         .populate("comments.author", "username")
@@ -32,16 +32,17 @@ router.get("/", (req, res) => {
 
 // for searach
 
-router.get('/characters/?', (req, res) => {
-	console.log(req.body.params)
-	Character.find({name:{$eq: req.body.params}})
+router.post('/search/?', (req, res) => {
+	console.log(req.body.text)
+    console.log("----------------------->")
+	Character.find({name: req.body.text})
 		.then(characters => {
 			console.log(characters)
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
 			const userId = req.session.userId
-
-			res.redirect(`/characters/${characters[0].id}`)
+			// res.redirect(`/characters/${characters[0].id}`)
+            res.render('characters/index', { characters, username, loggedIn, userId })
 		})
 		.catch(err => res.redirect(`/error?error=${err}`))
 })  
