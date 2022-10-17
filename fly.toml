@@ -9,7 +9,7 @@ processes = []
   image = "flyio/hellofly:latest"
 
 [env]
-  PORT = "8080"
+  PORT = "3000"
   MONGODB_URL= "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
   CLIENT_ORIGIN = "this will be the front end's deployed application"
 
