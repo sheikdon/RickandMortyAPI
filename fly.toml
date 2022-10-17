@@ -10,8 +10,9 @@ processes = []
 
 [env]
   PORT = "3000"
-  MONGODB_URL= "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
+  DEPLOYED_URL = "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
   CLIENT_ORIGIN = "this will be the front end's deployed application"
+  SECRET = "iAmLostBroAndIDontHaveABugatti"
 
 
 [experimental]
