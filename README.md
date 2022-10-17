@@ -2,6 +2,14 @@
 
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
+### Summary
+
+### Welcome to the RickandMorts Wiki! This web site allow you to view and add new RickandMorts to the wiki server. You can view the characters as a guest user and simply click on one of the characters to get information on that character (name, status, species and etc).
+
+### Create an account to allow you to add your own RickandMorts, where you can add in the new character that you want, or if you are already a user with us login back in to edit the characters you have added to in the past and add new characters that you haven't made yet.
+
+### When in your own RickandMorts characters, you will be able to add/edit information such as schema you made and a comments section to discuss about your character.
+
 ### API EndPoints:
 ```
 | Verb   | URI Pattern            | Controller#Action |
@@ -15,7 +23,7 @@
 | GET    | `/new`                 | `user#newform`    |
 | GET    | `/`                    | `#index`          |
 | GET    | `/mine`                | `user#index`      |
-| GET    | `/:id`                 | `user#characters`       |
+| GET    | `/:id`                 | `user#characters` |
 ```
 
 ### Technologies used:
