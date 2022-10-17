@@ -1,9 +1,56 @@
 # RickandMortyAPI
 
-### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and save the desired characters.
+### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
+
+### API EndPoints:
+```
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/signup`              | `users#signup`    |
+| POST   | `/login`               | `users#login`     |
+| GET    | `/logout               | `user#logout      |
+| DELETE | `/parks/id:`           | `users#delete`    |
+| GET    | `/:id/edit`            | `user#edit`       |
+| PUT    | `/:id                  | `user#update`     |
+| GET    | `/new`                 | `user#newform`    |
+| GET    | `/`                    | `#index`          |
+| GET    | `/mine`                | `user#index`      |
+| GET    | `/:id`                 | `user#characters`       |
+```
 
 ### Technologies used:
-### HTML5, CSS, Javascript, Back-end code, and MongoDB
+```
+ HTML5, CSS, Javascript, Back-end code, and MongoDB
+ "bcryptjs": "^2.4.3",
+    "bootstrap-icons": "^1.9.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "liquid-express-views": "^1.0.8",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.4",
+    "morgan": "^1.10.0"
+ ```
+
+ ### Models:
+ ```
+name: { type: String, required: true },
+		status: { type: String, required: true },
+        species: { type: String, required: true },
+		gender: { type: String, required: true },
+		origin: { type: String, required: true },
+		location: { type: String, required: true },
+		image: {type: String, required: true},
+
+		owner: {
+			type: Schema.Types.ObjectID,
+			ref: 'User',
+		},
+		comments: [commentSchema]
+	},
+	{ timestamps: true }
+ ```
 
 ### As a user I want to be able to...
 ### sign up with a username and password
