@@ -1,4 +1,4 @@
-# fly.toml file generated for rickandmorts on 2022-10-17T17:44:33-05:00
+# fly.toml file generated for rickandmorts on 2022-10-17T18:26:13-05:00
 
 app = "rickandmorts"
 kill_signal = "SIGINT"
@@ -9,12 +9,15 @@ processes = []
   image = "flyio/hellofly:latest"
 
 [env]
-  PORT = "3000"
-  DEPLOYED_URL = "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
-  CLIENT_ORIGIN = "this will be the front end's deployed application"
-  SECRET = "iAmLostBroAndIDontHaveABugatti"
+DATABASE_URL = "mongodb://localhost/RickAndMortApp"
 
 
+PORT = "3000"
+
+SECRET = "iAmLostBroAndIDontHaveABugatti"
+
+
+DEPLOYED_URL = "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
