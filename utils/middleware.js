@@ -19,7 +19,7 @@ const middleware = (app) => {
 	app.use(
 		session({
 			secret: process.env.SECRET,
-			store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+			store: MongoStore.create({ mongoUrl: process.env.DEPLOYED_URL }),
 			saveUninitialized: true,
 			resave: false,
 		})
