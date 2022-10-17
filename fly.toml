@@ -12,7 +12,7 @@ processes = []
 DATABASE_URL = "mongodb://localhost/RickAndMortApp"
 
 
-PORT = "3000"
+PORT = "8080"
 
 SECRET = "iAmLostBroAndIDontHaveABugatti"
 
