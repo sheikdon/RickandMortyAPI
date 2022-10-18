@@ -19,11 +19,8 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 	
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
-<p align="center">
 
-### Summary
-
-</p>
+								### Summary
 
 ### Welcome to the RickandMorts Wiki! This web site allow you to view and add new RickandMorts to the wiki server. You can view the characters as a guest user and simply click on one of the characters to get information on that character (name, status, species and etc).
 
