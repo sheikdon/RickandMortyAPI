@@ -5,8 +5,10 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 </p>
 
 <p align="center">
-  <img src="">
+  <img src="![rick-morty-season-4-release-date](https://user-images.githubusercontent.com/104471453/196477064-6ab1e66e-1bfb-477f-89cf-1512cb54b396.png)
+">
 </p>
+
 ### Website Link: https://ricksandmortswiki.fly.dev/
 * feel free to add more character and discuss on the VR1 wiki!
 
