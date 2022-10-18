@@ -1,4 +1,5 @@
-# RickandMortyAPI
+# RickandMorts Wiki
+website link: https://ricksandmortswiki.fly.dev/
 
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
@@ -17,7 +18,7 @@
 | POST   | `/signup`              | `users#signup`    |
 | POST   | `/login`               | `users#login`     |
 | GET    | `/logout               | `user#logout      |
-| DELETE | `/parks/id:`           | `users#delete`    |
+| DELETE | `/characters/id:`      | `users#delete`    |
 | GET    | `/:id/edit`            | `user#edit`       |
 | PUT    | `/:id                  | `user#update`     |
 | GET    | `/new`                 | `user#newform`    |
