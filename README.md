@@ -2,13 +2,17 @@
 <p align="center">  
 This is a basic Fullstack application that shows [Rick and Morty](https://rickandmortyapi.com/) characters and their details, based on mvvm architecture.
 </p>
+
+### Website Link: https://ricksandmortswiki.fly.dev/
+* feel free to add more character and discuss on the VR1 wiki!
+
 <p align="center">
 	
 ![rick-morty](https://user-images.githubusercontent.com/104471453/196479790-248a3c79-63c7-4aee-bdbc-b6ad617562ea.png)
+	
 
 </p>
-### Website Link: https://ricksandmortswiki.fly.dev/
-* feel free to add more character and discuss on the VR1 wiki!
+
 
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
