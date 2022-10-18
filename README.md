@@ -1,6 +1,4 @@
-### RickandMorts Wiki
-======================
-
+<h1 align="center">RickAndMortsWiki</h1>
 
 <p align="center">  
 
