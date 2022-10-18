@@ -67,6 +67,7 @@ router.post("/", (req, res) => {
     // this is going to add ownership, via a foreign key reference, to our 
     // basically, all we have to do, is append our request body, with the `owner` field, and set the value to the logged in user's id
     req.body.owner = req.session.userId
+    //well written comments including a string
     console.log('the characters from the form', req.body)
     // we'll use the mongoose model method `create` to make a new 
     Character.create(req.body)

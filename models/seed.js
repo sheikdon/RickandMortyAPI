@@ -25,6 +25,7 @@ db.on('open', () => {
         location: "Citadel of Ricks",
         image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
         },
+        //your keys shouldn't be in strings
         {
         "name": "Morty Smith",
         "status": "Alive",
