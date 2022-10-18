@@ -4,7 +4,7 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 </p>
 
 <p align="center">
- ![RickandMorts](photos/rick-morty-season-4-release-date.png)
+ ![rick-morty](photos/rick-morty.png)
 </p>
 
 ### Website Link: https://ricksandmortswiki.fly.dev/
