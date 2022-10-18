@@ -1,5 +1,5 @@
 <p align="center">  
-# RickandMorts Wiki
+### RickandMorts Wiki
 </p>
 
 <p align="center">  
