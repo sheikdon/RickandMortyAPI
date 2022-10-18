@@ -1,4 +1,12 @@
 # RickandMorts Wiki
+<p align="center">  
+This is a basic Fullstack application that shows [Rick and Morty](https://rickandmortyapi.com/) characters and their details, based on mvvm architecture.
+
+</p>
+
+<p align="center">
+  <img src="">
+</p>
 ### Website Link: https://ricksandmortswiki.fly.dev/
 * feel free to add more character and discuss on the VR1 wiki!
 
