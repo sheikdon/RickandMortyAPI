@@ -8,8 +8,8 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 
 <p align="center">
 	
-![rick-morty](https://user-images.githubusercontent.com/104471453/196479790-248a3c79-63c7-4aee-bdbc-b6ad617562ea.png)
-	
+![rickandmortspic](https://user-images.githubusercontent.com/104471453/196481637-cbc0614e-9459-47a7-8d23-e6f059a45a59.jpeg)
+
 
 </p>
 
