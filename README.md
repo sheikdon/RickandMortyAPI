@@ -1,6 +1,6 @@
 # RickandMorts Wiki
 ### Website Link: https://ricksandmortswiki.fly.dev/
-### *feel free to add more character and discuss on the VR1 wiki!
+* feel free to add more character and discuss on the VR1 wiki!
 
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
