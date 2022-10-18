@@ -3,9 +3,11 @@
 This is a basic Fullstack application that shows [Rick and Morty](https://rickandmortyapi.com/) characters and their details, based on mvvm architecture.
 </p>
 
+<p align="center">
 ### Website Link: https://ricksandmortswiki.fly.dev/
 * feel free to add more character and discuss on the VR1 wiki!
-
+</p>
+	
 <p align="center">
 	
 ![rickandmortspic](https://user-images.githubusercontent.com/104471453/196481637-cbc0614e-9459-47a7-8d23-e6f059a45a59.jpeg)
@@ -13,7 +15,7 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 
 </p>
 
-
+<p align="center">
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
 ### Summary
@@ -93,6 +95,8 @@ name: { type: String, required: true },
 ## - Friday: Finish up the liquid and make a functional regardless how ugly the site is.
 ### - The Weekend: Decorate and add new ideas to the website and finish any missing work I have.
 ```
+</p>	
+	
 ### ERD
 ![ERD](photos/ERD.png)
 
