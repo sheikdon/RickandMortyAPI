@@ -1,11 +1,10 @@
 # RickandMorts Wiki
 <p align="center">  
 This is a basic Fullstack application that shows [Rick and Morty](https://rickandmortyapi.com/) characters and their details, based on mvvm architecture.
-
 </p>
 
 <p align="center">
- ![rick-morty-season-4-release-date](https://user-images.githubusercontent.com/104471453/196477064-6ab1e66e-1bfb-477f-89cf-1512cb54b396.png)
+ <a href="https://user-images.githubusercontent.com/104471453/196477064-6ab1e66e-1bfb-477f-89cf-1512cb54b396.png)"
 </p>
 
 ### Website Link: https://ricksandmortswiki.fly.dev/
