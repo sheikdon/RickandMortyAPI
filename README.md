@@ -8,7 +8,7 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 
 <p align="center">
 	
-### Website Link: https://ricksandmortswiki.fly.dev/
+<h1 align="center"> ### Website Link: https://ricksandmortswiki.fly.dev/</h1>
 * feel free to add more character and discuss on the VR1 wiki!
 
 </p>
