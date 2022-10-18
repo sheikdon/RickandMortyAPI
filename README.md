@@ -4,7 +4,9 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 </p>
 
 <p align="center">
- ![rick-morty](photos/rick-morty.png)
+	
+![rick-morty](https://user-images.githubusercontent.com/104471453/196479790-248a3c79-63c7-4aee-bdbc-b6ad617562ea.png)
+
 </p>
 
 ### Website Link: https://ricksandmortswiki.fly.dev/
