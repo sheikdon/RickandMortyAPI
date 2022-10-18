@@ -1,9 +1,6 @@
-<p align="center">  
-
 ### RickandMorts Wiki
-============================
+======================
 
-</p>
 
 <p align="center">  
 
