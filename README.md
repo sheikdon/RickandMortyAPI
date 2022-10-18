@@ -16,6 +16,7 @@ This is a basic Fullstack application that shows [Rick and Morty](https://rickan
 </p>
 
 <p align="center">
+	
 ### The Objective of this Fullstack App is to display information of the current characters in the database for Rick and Morty. You will be able to search and create the desired characters.
 
 ### Summary
@@ -95,6 +96,7 @@ name: { type: String, required: true },
 ## - Friday: Finish up the liquid and make a functional regardless how ugly the site is.
 ### - The Weekend: Decorate and add new ideas to the website and finish any missing work I have.
 ```
+	
 </p>	
 	
 ### ERD
