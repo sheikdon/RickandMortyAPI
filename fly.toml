@@ -1,23 +1,18 @@
-# fly.toml file generated for rickandmorts on 2022-10-17T18:26:13-05:00
+# fly.toml file generated for ricksandmortswiki on 2022-10-17T19:07:33-05:00
 
-app = "rickandmorts"
+app = "ricksandmortswiki"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
 [build]
-  image = "flyio/hellofly:latest"
+  builder = "heroku/buildpacks:20"
 
 [env]
-DATABASE_URL = "mongodb://localhost/RickAndMortApp"
+  DEPLOYED_URL = "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
+  PORT = "8080"
+  SECRET = "iAmLostBroAndIDontHaveABugatti"
 
-
-PORT = "8080"
-
-SECRET = "iAmLostBroAndIDontHaveABugatti"
-
-
-DEPLOYED_URL = "mongodb+srv://sheikdon:sheikdon@rickandmorts.kw2te3a.mongodb.net/RickAndMortApp?retryWrites=true&w=majority"
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
